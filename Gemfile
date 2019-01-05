@@ -68,3 +68,4 @@ end
 
 gem 'sidekiq'
 gem 'nokogiri'
+gem 'redis-namespace'

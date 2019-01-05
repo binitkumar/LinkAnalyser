@@ -162,6 +162,8 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     redis (4.1.0)
+    redis-namespace (1.6.0)
+      redis (>= 3.0.4)
     ruby_parser (3.12.0)
       sexp_processor (~> 4.9)
     sass (3.7.3)
@@ -240,6 +242,7 @@ DEPENDENCIES
   rails (= 4.2.4)
   rails_apps_pages
   rails_layout
+  redis-namespace
   sass-rails (~> 5.0)
   sidekiq
   simple_form

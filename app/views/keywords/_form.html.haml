@@ -1,0 +1,8 @@
+= simple_form_for(@keyword) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :pattern
+
+  .form-actions
+    = f.button :submit

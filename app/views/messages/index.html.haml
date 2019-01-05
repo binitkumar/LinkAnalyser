@@ -1,0 +1,25 @@
+%h1 News articles
+
+= link_to 'New Message', new_message_path, class: 'btn btn-primary pull-right'
+%table.table
+  %thead
+    %tr
+      %th Link
+      %th Title
+      %th Publication Date
+      %th
+      %th
+      %th
+
+  %tbody
+    - @messages.each do |message|
+      %tr
+        %td= message.link
+        %td= message.title
+        %td= message.publication_date
+        %td= link_to 'Show', message
+        %td= link_to 'Edit', edit_message_path(message)
+        %td= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+

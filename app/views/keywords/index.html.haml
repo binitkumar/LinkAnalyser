@@ -1,0 +1,21 @@
+%h1 Keywords
+
+= link_to 'New Keyword', new_keyword_path, class: 'btn btn-primary pull-right'
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Pattern
+      %th
+      %th
+      %th
+
+  %tbody
+    - @keywords.each do |keyword|
+      %tr
+        %td= keyword.pattern
+        %td= link_to 'Show', keyword
+        %td= link_to 'Edit', edit_keyword_path(keyword)
+        %td= link_to 'Destroy', keyword, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
